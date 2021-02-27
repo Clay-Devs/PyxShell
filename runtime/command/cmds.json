@@ -1,0 +1,9 @@
+{
+    "datafor": [
+        { 
+            "version": "/shipping/data/version.json"
+        }
+    ],
+    "cd": "/shipping/cd",
+    "version": "/shipping/version"
+}

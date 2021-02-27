@@ -1,0 +1,6 @@
+{
+    "ShellHost": "0.0.1",
+    "DirHandler": "0.0.1",
+    "ioHandler": "0.0.1",
+    "bootmgr": "0.0.1"
+}
