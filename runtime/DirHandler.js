@@ -6,7 +6,7 @@ const EventEmitter = require("events");
 class DirHandler extends EventEmitter {
     constructor() {
         super()
-        this.curDir = require('path').join(__dirname, '../')
+        this.curDir = require('path').join(__dirname, '../').replace(/\\/g, '/').slice(0, -1)
     }
 
 

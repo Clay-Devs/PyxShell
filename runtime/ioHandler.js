@@ -1,6 +1,7 @@
 const readline = require('readline')
 const CommandHandler = require('./command/handle')
 const DirHandler = require('./DirHandler')
+const isdevmode = require('../devmode.json').devmode
 
 const io = readline.createInterface({
     input: process.stdin,
@@ -20,9 +21,11 @@ async function promptinput() {
 
     if(!validcmd){ console.log(`${args[0]} is not recognized as an internal or external command`); return promptinput() }
     
-    ch.runcmd(args[0], args)
+    await ch.runcmd(args[0], args, isdevmode, function() {
+        promptinput()
+    })
 
-    promptinput()
+    
     })
 
 

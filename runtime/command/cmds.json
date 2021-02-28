@@ -4,6 +4,8 @@
             "version": "/shipping/data/version.json"
         }
     ],
+    "dir": "/shipping/dir",
+    "yt": "/shipping/youtubedl/ytdl",
     "cd": "/shipping/cd",
     "version": "/shipping/version"
 }

@@ -1,6 +1,7 @@
+
 const data = require('./data/version.json') //dont require file in v1
 
-module.exports = (args) => {
+module.exports = (args, id, cb) => {
     
        const find = args[1]
 
@@ -10,5 +11,5 @@ module.exports = (args) => {
            console.log(`PyxShell Version 0.0.1`)
        }
 
-    
+    cb()
 }

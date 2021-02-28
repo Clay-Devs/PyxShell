@@ -18,12 +18,14 @@ class CommandHandler extends EventEmitter {
 
     }
 
-    runcmd (cmd, args) {
+    async runcmd (cmd, args, id, callback) {
         
 
         var cmddir = commands[`${cmd}`]
 
-        require(`.${cmddir}`)(args)
+        await require(`.${cmddir}`)(args, id, function() {
+            callback()
+        })
     }
 }
 
