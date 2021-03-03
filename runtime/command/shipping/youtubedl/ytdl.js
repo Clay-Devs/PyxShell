@@ -18,7 +18,7 @@ module.exports = async (args, id, endl) => {
     vidId = vidId.slice(2, 13)
    var info = await yve.getVideoInfo(vidId)
 
-   if(!info.existing) {endl(); return console.log(`Please Provide a valid YouTube Video Link`)}
+   if(!info.existing) { console.log(`Please Provide a valid YouTube Video Link`); endl(); return;}
 
    
 
@@ -29,8 +29,10 @@ module.exports = async (args, id, endl) => {
     }
 
 
-
-    ytdl(args[1])
+    if(id && !args[2]) {
+      Debug.Info(`Defaulting to quality 'mp4/720p' itag: 22`)
+    }
+    ytdl(args[1], { quality: "22" })
 .on('response', function(res){
 
   var ProgressBar = require('progress');
@@ -49,6 +51,6 @@ module.exports = async (args, id, endl) => {
 
 })
 .on( 'finish', function(){ console.log('Download finished...'); endl()} )
-.pipe( fs.createWriteStream(downloaddir + '/downloads/download.mp4') );
+.pipe( fs.createWriteStream(downloaddir + '/downloads/'+ 'bruh' +'.mp4') );
 
 }

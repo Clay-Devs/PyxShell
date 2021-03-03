@@ -10,5 +10,6 @@
     "cd": "/shipping/cd",
     "version": "/shipping/version",
     "exit": "/shipping/exit",
-    "quit": "/shipping/exit" 
+    "quit": "/shipping/exit",
+    "pyx": "/shipping/pyx"
 }

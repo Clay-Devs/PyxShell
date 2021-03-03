@@ -1,0 +1,26 @@
+>Plugin version @0
+
+
+readline.config> { name: "test", version: "0.0.1" }
+readline.startAT> { sa: "line.10" }
+readline.endAT> { ea: config.endl }
+
+
+
+start??
+
+#import<handle>
+#import<pyxshell.pluginhandle>
+
+
+using pyxshell;
+
+
+pyxshell.console.debug("hello world!")
+
+
+
+
+
+
+endl??

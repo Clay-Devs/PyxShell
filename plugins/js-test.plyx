@@ -1,0 +1,11 @@
+>Plugin version @0
+
+readline.config> { name: "js.test", version: "0.0.1" }
+readline.typeof ?? pyx.plugintype.js
+
+
+js.start=> 
+
+    console.log(`hello world`)
+
+js.end<=
