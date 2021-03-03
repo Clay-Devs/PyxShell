@@ -18,7 +18,7 @@ module.exports = async (args, id, endl) => {
     vidId = vidId.slice(2, 13)
    var info = await yve.getVideoInfo(vidId)
 
-   if(!info.existing) return console.log(`Please Provide a valid YouTube Video Link`)
+   if(!info.existing) {endl(); return console.log(`Please Provide a valid YouTube Video Link`)}
 
    
 
