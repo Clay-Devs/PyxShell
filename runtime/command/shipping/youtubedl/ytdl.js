@@ -30,7 +30,7 @@ module.exports = async (args, id, endl) => {
 
 
 
-    ytdl(args[1], { filter: format => format.itag === '136'})
+    ytdl(args[1])
 .on('response', function(res){
 
   var ProgressBar = require('progress');
